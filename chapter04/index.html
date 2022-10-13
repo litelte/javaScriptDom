@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一个基于Javascript的图片库</title>
+    <link rel="stylesheet" href="src/styles.css">
+</head>
+
+<body>
+    <h1>Snapshots</h1>
+    <ul>
+        <!-- 下一步处理就是，在用户点击图片时，可以停在这个页面，而不是转到一个新的页面 -->
+        <!-- 设置onclick的返回值为false，会让JavaScript认为这个连接没有被点击，从而不会转向至新的链接 -->
+        <!-- onclick=showPic(this);return false -->
+        <li><a href="images/airplane.jpg" title="一个飞机飞在天上" onclick="showPic(this);return false;">airplane</a></li>
+        <li><a href=" images/hawk.jpg" onclick="showPic(this);return false;" title="一个展翅飞翔的老鹰">hawk</a></li>
+        <li><a href="images/sunset.jpg" onclick="showPic(this);return false;" title="一个落日">sunset</a></li>
+        <li><a href="images/sunshine.jpg" onclick="showPic(this);return false;" title="沙滩海风还有阳光">sunshine</a></li>
+    </ul>
+    <!-- 这是一个占位符图片 -->
+    <img src="images/placeholder.jpg" alt="我的相册" id="placeholder">
+    <p id="description">选一张照片吧</p>
+
+    <!-- <script src="src/scripts.js"></script> -->
+    <!-- 可以使用非DOM的解决方案 -->
+    <!-- <script src="src/nondom.js"></script> -->
+    <!-- <script src="src/countBodyChild.js"></script> -->
+    <script src="src/changetitleName.js"></script>
+
+</body>
+
+</html>

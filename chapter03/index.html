@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一个测试文档</title>
+</head>
+
+<body>
+    <h1>买啥？</h1>
+    <p title="一个温柔的提醒">别忘了买这个东西</p>
+    <ul id="purchases">
+        <li>一斤塔玛</li>
+        <li class="sale">起司</li>
+        <li class="sale important">牛奶</li>
+    </ul>
+    <script>
+        // 获取id名为purchases的元素的类型
+        alert(typeof document.getElementById("purchases"))
+        // 获取标签名为li元素的类型
+        /*
+        下面是控制台的输入输出结果
+        typeof document.getElementsByTagName('li')
+        'object'
+        */
+        /*
+        这个方法调用document.getElementsByTagName,将返回一个对象数组，和其他的数组一样，可以利用length属性
+        查询这个数组里元素的个数，只需要后面加一个.length
+        document.getElementsByTagName('li').length
+        3
+        为了验证这一点，可以使用for循环来验证
+        for(var i=0;i<document.getElementsByTagName('li').length;i++){
+            alert(typeof document.getElementsByTagName('li')[i])
+        }
+        */
+    // 获取文档中的所有结点的方法
+        /*
+        document.getElementsByTagName("*").length
+        */
+    //    把getElementById和getElementsByTagName结合运用，查询id为purchase清单里的元素
+        /*
+        var shopping  = document.getElementById("purchases");
+        var items = shopping.getElementsByTagName("*");
+        items.length;
+        3
+        */
+    //    下面是getElementsByClassName(class)
+        /*
+        这个方法的返回值和getElementsByTagName一样，返回的是一个相同类名的数组，比如下面的代码：
+        var saleName = document.getElementsByClassName('sale');
+        saleName
+        HTMLCollection(2) [li.sale, li.sale.important]
+        当然也是可以使用.length
+        */
+
+    </script>
+    <!-- 运行的结果为object，原因是文档中的每一个对象都是一个对象 -->
+</body>
+
+</html>
+<!--
+    需要注意的是，在HTML文档中，任何一个元素都是一个对象
+ -->
